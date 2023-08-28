@@ -1,9 +1,9 @@
 syntax = "proto3";
 import "user.proto";
 
-package pb;
+package authpb;
 
-option go_package = "github.com/zvash/bgmood-auth-service/pb";
+option go_package = "github.com/zvash/bgmood-auth-service/authpb";
 
 message AuthenticateRequest {};
 

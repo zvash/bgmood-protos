@@ -13,9 +13,9 @@ import "rpc_terminate_other_sessions.proto";
 import "rpc_refresh_token.proto";
 import "rpc_resend_verification_email.proto";
 
-package pb;
+package authpb;
 
-option go_package = "github.com/zvash/bgmood-auth-service/pb";
+option go_package = "github.com/zvash/bgmood-auth-service/authpb";
 
 service Auth {
   rpc RegisterUser (RegisterUserRequest) returns (RegisterUserResponse) {}
