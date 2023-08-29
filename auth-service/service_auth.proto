@@ -1,5 +1,6 @@
 syntax = "proto3";
 import "rpc_register_user.proto";
+import "rpc_update_user.proto";
 import "rpc_login.proto";
 import "rpc_authenticate.proto";
 import "rpc_logout.proto";
@@ -21,6 +22,7 @@ service Auth {
   rpc RegisterUser (RegisterUserRequest) returns (RegisterUserResponse) {}
   rpc RefreshToken (RefreshTokenRequest) returns (RefreshTokenResponse) {}
   rpc Login (LoginRequest) returns (LoginResponse) {}
+  rpc UpdateUser (UpdateUserRequest) returns (UpdateUserResponse) {}
   rpc ListActiveSessions (ListActiveSessionsRequest) returns (ListActiveSessionsResponse) {}
   rpc TerminateSingleSession (TerminateSingleSessionRequest) returns (TerminateSingleSessionResponse) {}
   rpc TerminateOtherSessions (TerminateOtherSessionsRequest) returns (TerminateOtherSessionsResponse) {}

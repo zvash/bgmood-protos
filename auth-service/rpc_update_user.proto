@@ -1,0 +1,14 @@
+syntax = "proto3";
+import "user.proto";
+
+package authpb;
+
+option go_package = "github.com/zvash/bgmood-auth-service/authpb";
+
+message UpdateUserRequest {
+    optional string name = 1;
+}
+
+message UpdateUserResponse {
+    User user = 1;
+}
