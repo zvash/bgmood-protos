@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package filepb;
+
+option go_package = "github.com/zvash/bgmood-file-service/filepb";
+
+message FileInfo {
+    enum FileType {
+        AVATAR_IMAGE = 0;
+        BACKGROUND_IMAGE = 1;
+        ENCRYPTED_FILE = 2;
+    }
+    FileType file_type = 1;
+    optional string extension = 2;
+}
+
+message UploadFileRequest {
+    oneof data {
+        FileInfo info = 1;
+        bytes chunk_data = 2;
+    }
+}
+
+message UploadFileResponse {
+    string name = 1;
+    string path = 2;
+    string url = 3;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package filepb;
+
+option go_package = "github.com/zvash/bgmood-file-service/filepb";
+
+import "rpc_upload_file.proto";
+
+service File {
+    rpc UploadFile(stream UploadFileRequest) returns (UploadFileResponse) {}
+}
