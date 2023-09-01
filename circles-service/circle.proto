@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package circlespb;
+
+option go_package = "github.com/zvash/bgmood-circles-service/circlespb";
+
+import "google/protobuf/timestamp.proto";
+
+message Circle {
+    string id = 1;
+    string owner_id = 2;
+    string title = 3;
+    string avatar = 4;
+    string description = 5;
+    string circle_type = 6;
+    bool is_private  = 7;
+    bool is_featured = 8;
+    google.protobuf.Timestamp created_at = 9;
+}

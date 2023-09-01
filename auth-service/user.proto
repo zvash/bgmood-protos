@@ -13,5 +13,5 @@ message User {
   string password = 4;
   optional string avatar = 5;
   bool is_verified = 6;
-  google.protobuf.Timestamp create_at = 7;
+  google.protobuf.Timestamp created_at = 7;
 }

@@ -4,6 +4,8 @@ package circlespb;
 
 option go_package = "github.com/zvash/bgmood-circles-service/circlespb";
 
+import "rpc_build_circle.proto";
+
 service Circles {
-    
+    rpc CreateCircle (CreateCircleRequest) returns (CreateCircleResponse) {}
 }
