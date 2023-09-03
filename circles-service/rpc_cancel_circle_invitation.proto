@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package circlespb;
+
+option go_package = "github.com/zvash/bgmood-circles-service/circlespb";
+
+message CancelCircleInvitationRequest {
+    string circle_id = 1;
+    string user_id = 2;
+}
+
+message CancelCircleInvitationResponse {
+    string message = 1;
+}

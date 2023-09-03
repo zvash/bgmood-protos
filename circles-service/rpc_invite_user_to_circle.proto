@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package circlespb;
+
+option go_package = "github.com/zvash/bgmood-circles-service/circlespb";
+
+message InviteUserToCircleRequest {
+    string circle_id = 1;
+    string user_id = 2;
+}
+
+message InviteUserToCircleResponse {
+    string message = 1;
+}
+
+message RollbackInviteUserToCircleRequest {
+    string circle_id = 1;
+    string user_id = 2;
+}
+
+message RollbackInviteUserToCircleResponse {
+    string message = 1;
+}

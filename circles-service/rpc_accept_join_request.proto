@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package circlespb;
+
+option go_package = "github.com/zvash/bgmood-circles-service/circlespb";
+
+message AcceptJoinRequestRequest {
+    string join_request_id = 1;
+}
+
+message AcceptJoinRequestResponse {
+    string message = 1;
+}
+
+message RemoveJoinRequestRequest {
+    string join_request_id = 1;
+}
+
+message RemoveJoinRequestResponse {
+    string message = 1;
+}

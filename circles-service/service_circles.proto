@@ -1,13 +1,28 @@
 syntax = "proto3";
 
+import "rpc_build_circle.proto";
+import "rpc_destroy_circle.proto";
+import "rpc_invite_user_to_circle.proto";
+import "rpc_kick_from_circle.proto";
+import "rpc_send_join_request.proto";
+import "rpc_accept_join_request.proto";
+import "rpc_leave_circle.proto";
+import "rpc_get_joined_circles.proto";
+
 package circlespb;
 
 option go_package = "github.com/zvash/bgmood-circles-service/circlespb";
 
-import "rpc_build_circle.proto";
-import "rpc_destroy_circle.proto";
 
 service Circles {
     rpc CreateCircle (CreateCircleRequest) returns (CreateCircleResponse) {}
     rpc DestroyCircle (DestroyCircleRequest) returns (DestroyCircleResponse) {}
+    rpc InviteUserToCircle (InviteUserToCircleRequest) returns (InviteUserToCircleResponse) {}
+    rpc RollbackInviteUserToCircle (RollbackInviteUserToCircleRequest) returns (RollbackInviteUserToCircleResponse) {}
+    rpc KickFromCircle (KickFromCircleRequest) returns (KickFromCircleResponse) {}
+    rpc SendJoinRequest (SendJoinRequestRequest) returns (SendJoinRequestResponse) {}
+    rpc AcceptJoinRequest (AcceptJoinRequestRequest) returns (AcceptJoinRequestResponse) {}
+    rpc RemoveJoinRequest (RemoveJoinRequestRequest) returns (RemoveJoinRequestResponse) {}
+    rpc LeaveCircle (LeaveCircleRequest) returns (LeaveCircleResponse) {}
+    rpc GetJoinedCircles (GetJoinedCirclesRequest) returns (GetJoinedCirclesResponse) {}
 }
