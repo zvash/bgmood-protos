@@ -13,3 +13,11 @@ message GetJoinedCirclesRequest {
 message GetJoinedCirclesResponse {
     repeated Circle circles = 1;
 }
+
+message GetRequestedCirclesRequest {
+    int64 page = 1;
+}
+
+message GetRequestedCirclesResponse {
+    repeated Circle circles = 1;
+}

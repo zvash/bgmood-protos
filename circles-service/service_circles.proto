@@ -7,7 +7,7 @@ import "rpc_kick_from_circle.proto";
 import "rpc_send_join_request.proto";
 import "rpc_accept_join_request.proto";
 import "rpc_leave_circle.proto";
-import "rpc_get_joined_circles.proto";
+import "rpc_get_circles.proto";
 
 package circlespb;
 
@@ -25,4 +25,5 @@ service Circles {
     rpc RemoveJoinRequest (RemoveJoinRequestRequest) returns (RemoveJoinRequestResponse) {}
     rpc LeaveCircle (LeaveCircleRequest) returns (LeaveCircleResponse) {}
     rpc GetJoinedCircles (GetJoinedCirclesRequest) returns (GetJoinedCirclesResponse) {}
+    rpc GetRequestedCircles (GetRequestedCirclesRequest) returns (GetRequestedCirclesResponse) {}
 }
