@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package circlespb;
+
+option go_package = "github.com/zvash/bgmood-circles-service/circlespb";
+
+import "circle.proto";
+
+message ViewCircleRequest {
+    string circle_id = 1;
+}
+
+message ViewCircleResponse {
+    Circle circle = 1;
+}
