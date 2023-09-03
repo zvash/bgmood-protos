@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package circlespb;
+
+option go_package = "github.com/zvash/bgmood-circles-service/circlespb";
+
+message Reaction {
+    string id = 1;
+    string name = 2;
+    optional string emoji = 3;
+    optional string text_representation = 4;
+}

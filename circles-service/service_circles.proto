@@ -13,6 +13,8 @@ import "rpc_view_circle.proto";
 import "rpc_explore_circles.proto";
 import "rpc_modify_circle_access.proto";
 import "rpc_circle_wp_change_access.proto";
+import "rpc_mood_and_reactions.proto";
+import "rpc_available_reactions.proto";
 
 package circlespb;
 
@@ -39,4 +41,8 @@ service Circles {
     rpc DemoteToViewer (DemoteToViewerRequest) returns (AccessModificationResponse) {}
     rpc GetCircleWPChangeAccess (GetCircleWPChangeAccessRequest) returns (CircleWPChangeAccessResponse) {}
     rpc SetCircleWPChangeAccess (SetCircleWPChangeAccessRequest) returns (CircleWPChangeAccessResponse) {}
+    rpc CreateMood (CreateMoodRequest) returns (MoodResponse) {}
+    rpc React (ReactRequest) returns (MoodResponse) {}
+    rpc RemoveReaction (RemoveReactionRequest) returns (MoodResponse) {}
+    rpc GetAvailableReactions (GetAvailableReactionsRequest) returns (GetAvailableReactionsResponse) {}
 }

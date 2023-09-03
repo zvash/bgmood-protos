@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package circlespb;
+
+option go_package = "github.com/zvash/bgmood-circles-service/circlespb";
+
+import "mood.proto";
+
+message CreateMoodRequest {
+    string circle_id = 1;
+    string image = 2;
+    bool set_background = 3;
+    optional string description = 4;
+}
+
+message ReactRequest {
+    string mood_id = 1;
+    string reaction_id = 2;
+}
+
+message RemoveReactionRequest {
+    string mood_id = 1;
+}
+
+message MoodResponse {
+    Mood mood = 1;
+}
