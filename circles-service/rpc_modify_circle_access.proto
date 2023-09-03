@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package circlespb;
+
+option go_package = "github.com/zvash/bgmood-circles-service/circlespb";
+
+message PromoteToPosterRequest {
+    string circle_id = 1;
+    string user_id = 2;
+}
+
+message PromoteToAdminRequest {
+    string circle_id = 1;
+    string user_id = 2;
+}
+
+message DemoteToViewerRequest {
+    string circle_id = 1;
+    string user_id = 2;
+}
+
+message AccessModificationResponse {
+    string circle_id = 1;
+    string current_access = 2;
+}

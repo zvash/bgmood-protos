@@ -10,6 +10,7 @@ import "rpc_leave_circle.proto";
 import "rpc_get_circles.proto";
 import "rpc_view_circle.proto";
 import "rpc_explore_circles.proto";
+import "rpc_modify_circle_access.proto";
 
 package circlespb;
 
@@ -30,4 +31,7 @@ service Circles {
     rpc GetRequestedCircles (GetRequestedCirclesRequest) returns (GetRequestedCirclesResponse) {}
     rpc ViewCircle (ViewCircleRequest) returns (ViewCircleResponse) {}
     rpc ExploreCircles (ExploreCirclesRequest) returns (ExploreCirclesResponse) {}
+    rpc PromoteToPoster (PromoteToPosterRequest) returns (AccessModificationResponse) {}
+    rpc PromoteToAdmin (PromoteToAdminRequest) returns (AccessModificationResponse) {}
+    rpc DemoteToViewer (DemoteToViewerRequest) returns (AccessModificationResponse) {}
 }
