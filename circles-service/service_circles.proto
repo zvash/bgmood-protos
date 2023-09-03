@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 import "rpc_build_circle.proto";
+import "rpc_edit_circle.proto";
 import "rpc_destroy_circle.proto";
 import "rpc_invite_user_to_circle.proto";
 import "rpc_kick_from_circle.proto";
@@ -11,6 +12,7 @@ import "rpc_get_circles.proto";
 import "rpc_view_circle.proto";
 import "rpc_explore_circles.proto";
 import "rpc_modify_circle_access.proto";
+import "rpc_circle_wp_change_access.proto";
 
 package circlespb;
 
@@ -19,6 +21,7 @@ option go_package = "github.com/zvash/bgmood-circles-service/circlespb";
 
 service Circles {
     rpc CreateCircle (CreateCircleRequest) returns (CreateCircleResponse) {}
+    rpc EditCircle (EditCircleRequest) returns (EditCircleResponse) {}
     rpc DestroyCircle (DestroyCircleRequest) returns (DestroyCircleResponse) {}
     rpc InviteUserToCircle (InviteUserToCircleRequest) returns (InviteUserToCircleResponse) {}
     rpc RollbackInviteUserToCircle (RollbackInviteUserToCircleRequest) returns (RollbackInviteUserToCircleResponse) {}
@@ -34,4 +37,6 @@ service Circles {
     rpc PromoteToPoster (PromoteToPosterRequest) returns (AccessModificationResponse) {}
     rpc PromoteToAdmin (PromoteToAdminRequest) returns (AccessModificationResponse) {}
     rpc DemoteToViewer (DemoteToViewerRequest) returns (AccessModificationResponse) {}
+    rpc GetCircleWPChangeAccess (GetCircleWPChangeAccessRequest) returns (CircleWPChangeAccessResponse) {}
+    rpc SetCircleWPChangeAccess (SetCircleWPChangeAccessRequest) returns (CircleWPChangeAccessResponse) {}
 }
