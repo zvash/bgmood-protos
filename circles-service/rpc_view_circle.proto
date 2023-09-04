@@ -11,5 +11,5 @@ message ViewCircleRequest {
 }
 
 message ViewCircleResponse {
-    Circle circle = 1;
+    CircleMeta circle = 1;
 }
