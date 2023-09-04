@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package circlespb;
+package cpb;
 
-option go_package = "github.com/zvash/bgmood-circles-service/circlespb";
+option go_package = "github.com/zvash/bgmood-circles-service/cpb";
 
 message AcceptJoinRequestRequest {
     string join_request_id = 1;

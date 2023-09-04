@@ -16,9 +16,9 @@ import "rpc_circle_wp_change_access.proto";
 import "rpc_mood_and_reactions.proto";
 import "rpc_available_reactions.proto";
 
-package circlespb;
+package cpb;
 
-option go_package = "github.com/zvash/bgmood-circles-service/circlespb";
+option go_package = "github.com/zvash/bgmood-circles-service/cpb";
 
 
 service Circles {

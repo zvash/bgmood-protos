@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package circlespb;
+package cpb;
 
-option go_package = "github.com/zvash/bgmood-circles-service/circlespb";
+option go_package = "github.com/zvash/bgmood-circles-service/cpb";
 
 message KickFromCircleRequest {
     string circle_id = 1;
