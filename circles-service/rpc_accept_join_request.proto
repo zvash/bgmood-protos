@@ -5,7 +5,7 @@ package cpb;
 option go_package = "github.com/zvash/bgmood-circles-service/cpb";
 
 message AcceptJoinRequestRequest {
-    string join_request_id = 1;
+    int64 join_request_id = 1;
 }
 
 message AcceptJoinRequestResponse {
@@ -13,7 +13,7 @@ message AcceptJoinRequestResponse {
 }
 
 message RemoveJoinRequestRequest {
-    string join_request_id = 1;
+    int64 join_request_id = 1;
 }
 
 message RemoveJoinRequestResponse {
