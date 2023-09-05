@@ -12,7 +12,7 @@ message Mood {
     string poster_id = 2;
     string circle_id = 3;
     string image = 4;
-    bool set_backgrounf = 5;
+    bool set_background = 5;
     google.protobuf.Timestamp created_at = 6;
     optional string description = 7;
     optional Reaction user_reaction = 8;
