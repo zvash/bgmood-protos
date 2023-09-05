@@ -8,12 +8,18 @@ message GetCircleWPChangeAccessRequest {
     string circle_id = 1;
 }
 
+enum AccessType {
+    ACCEPT_ALL = 0;
+    ASK_FIRST = 1;
+    REJECT_ALL = 2;
+}
+
 message SetCircleWPChangeAccessRequest {
     string circle_id = 1;
-    bool has_access = 2;
+    bool AccessType = 2;
 }
 
 message CircleWPChangeAccessResponse {
     string circle_id = 1;
-    bool has_access = 2;
+    bool AccessType = 2;
 }
