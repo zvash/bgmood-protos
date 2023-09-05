@@ -16,10 +16,10 @@ enum AccessType {
 
 message SetCircleWPChangeAccessRequest {
     string circle_id = 1;
-    bool AccessType = 2;
+    AccessType access_type = 2;
 }
 
 message CircleWPChangeAccessResponse {
     string circle_id = 1;
-    bool AccessType = 2;
+    AccessType access_type = 2;
 }
