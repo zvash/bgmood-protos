@@ -15,7 +15,7 @@ message CreateMoodRequest {
 
 message ReactRequest {
     string mood_id = 1;
-    string reaction_id = 2;
+    int64 reaction_id = 2;
 }
 
 message RemoveReactionRequest {

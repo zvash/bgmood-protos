@@ -16,5 +16,5 @@ message Mood {
     google.protobuf.Timestamp created_at = 6;
     optional string description = 7;
     optional Reaction user_reaction = 8;
-    repeated Reaction others_reactions = 9;
+    repeated ReactionAggregated others_reactions = 9;
 }
