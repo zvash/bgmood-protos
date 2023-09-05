@@ -12,5 +12,5 @@ message ExploreCirclesRequest {
 }
 
 message ExploreCirclesResponse {
-    repeated Circle circles = 1;
+    repeated CircleMeta circles = 1;
 }
