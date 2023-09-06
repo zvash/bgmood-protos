@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package cpb;
+
+option go_package = "github.com/zvash/bgmood-circles-service/cpb";
+
+message GetCircleJoinRequestsRequest {
+    string circle_id = 1;
+}
+
+message GetCircleJoinRequestsResponse {
+    repeated string user_ids = 1;
+}

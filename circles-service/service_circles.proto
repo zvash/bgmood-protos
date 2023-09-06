@@ -15,6 +15,7 @@ import "rpc_modify_circle_access.proto";
 import "rpc_circle_wp_change_access.proto";
 import "rpc_mood_and_reactions.proto";
 import "rpc_available_reactions.proto";
+import "rpc_get_all_join_requests_for_circle.proto";
 
 package cpb;
 
@@ -45,4 +46,5 @@ service Circles {
     rpc React (ReactRequest) returns (MoodResponse) {}
     rpc RemoveReaction (RemoveReactionRequest) returns (MoodResponse) {}
     rpc GetAvailableReactions (GetAvailableReactionsRequest) returns (GetAvailableReactionsResponse) {}
+    rpc GetCircleJoinRequests (GetCircleJoinRequestsRequest) returns (GetCircleJoinRequestsResponse) {}
 }
