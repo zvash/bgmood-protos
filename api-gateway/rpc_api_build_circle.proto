@@ -11,8 +11,7 @@ message CircleInfo {
     string description = 2;
     string circle_type = 3;
     bool is_private = 4;
-    string avatar = 5;
-    string image_ext = 6;   
+    string image_ext = 5;   
 }
 
 message BuildCircleRequest {
