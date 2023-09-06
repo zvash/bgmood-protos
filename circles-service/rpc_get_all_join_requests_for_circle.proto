@@ -6,6 +6,7 @@ option go_package = "github.com/zvash/bgmood-circles-service/cpb";
 
 message GetCircleJoinRequestsRequest {
     string circle_id = 1;
+    int64 page = 2;
 }
 
 message GetCircleJoinRequestsResponse {
