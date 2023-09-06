@@ -1,0 +1,28 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+
+package pb;
+
+option go_package = "github.com/zvash/bgmood-api-gateway/pb";
+
+import "api_circle.proto";
+
+message CircleInfo {
+    string title = 1;
+    string description = 2;
+    string circle_type = 3;
+    bool is_private = 4;
+    string avatar = 5;
+    string image_ext = 6;
+}
+
+message BuildCircleRequest {
+    oneof data {
+        CircleInfo info = 1;
+        bytes chunk_data = 2;
+    }
+}
+
+message BuildCircleResponse {
+    Circle circle = 1;
+}

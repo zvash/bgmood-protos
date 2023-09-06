@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "github.com/zvash/bgmood-api-gateway/pb";
+
+import "google/protobuf/timestamp.proto";
+
+message Circle {
+    string id = 1;
+    string owner_id = 2;
+    string title = 3;
+    string avatar = 4;
+    string description = 5;
+    string circle_type = 6;
+    bool is_private  = 7;
+    bool is_featured = 8;
+    google.protobuf.Timestamp created_at = 9;
+}
+
+message CircleMeta {
+    string id = 1;
+    string owner_id = 2;
+    string title = 3;
+    string avatar = 4;
+    string description = 5;
+    string circle_type = 6;
+    bool is_private  = 7;
+    bool is_featured = 8;
+    google.protobuf.Timestamp created_at = 9;
+    int64 mood_count = 10;
+    int64 member_count = 11;
+    bool viewer_is_member = 12;
+    bool viewer_is_owner = 13;
+    bool viewer_can_post = 14;
+    repeated string tags = 15;
+}

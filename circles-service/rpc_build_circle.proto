@@ -7,11 +7,11 @@ option go_package = "github.com/zvash/bgmood-circles-service/cpb";
 import "circle.proto";
 
 message CreateCircleRequest {
-    string title = 2;
-    string avatar = 3;
-    string description = 4;
-    string circle_type = 5;
-    bool is_private  = 6;
+    string title = 1;
+    string avatar = 2;
+    string description = 3;
+    string circle_type = 4;
+    bool is_private = 5;
 }
 
 message CreateCircleResponse {
