@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "github.com/zvash/bgmood-api-gateway/pb";
+
+import "google/protobuf/timestamp.proto";
+import "api_reaction.proto";
+
+message Mood {
+    string id = 1;
+    string poster_id = 2;
+    string circle_id = 3;
+    string image = 4;
+    bool set_background = 5;
+    google.protobuf.Timestamp created_at = 6;
+    optional string description = 7;
+    optional Reaction user_reaction = 8;
+    repeated ReactionAggregated others_reactions = 9;
+}

@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "github.com/zvash/bgmood-api-gateway/pb";
+
+import "api_mood.proto";
+
+message MoodInfo {
+    string circle_id = 1;
+    bool set_background = 2;
+    optional string description = 3;
+    string image_ext = 4;   
+}
+
+message ShareMoodRequest {
+    oneof data {
+        MoodInfo info = 1;
+        bytes chunk_data = 2;
+    }
+}
+
+message ShareMoodResponse {
+    Mood mood = 1;
+}
