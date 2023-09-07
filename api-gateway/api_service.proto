@@ -2,6 +2,7 @@ syntax = "proto3";
 import "rpc_api_update_profile.proto";
 import "rpc_api_build_circle.proto";
 import "rpc_api_share_mood.proto";
+import "rpc_api_get_circle_join_requests.proto";
 
 package pb;
 
@@ -11,4 +12,5 @@ service App {
   rpc UpdateProfile (stream UpdateProfileRequest) returns (UpdateProfileResponse) {}
   rpc BuildCircle (stream BuildCircleRequest) returns (BuildCircleResponse) {}
   rpc ShareMood (stream ShareMoodRequest) returns (ShareMoodResponse) {}
+  rpc GetCircleJoinRequests (GetCircleJoinRequestsRequest) returns (CircleJoinRequestsWithUserResponse) {}
 }
